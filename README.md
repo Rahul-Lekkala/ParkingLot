@@ -3,15 +3,15 @@
 
 ## Contents
 
-[Project Requirements](#Project_Requirements)
+[Project Requirements](#project_requirements)
 
 [Description](#Description)
 
 [Installation](#Installation)
 
-[Running the project](#Running_the_project)
+[Running the project](#running_the_project)
 
-[Understanding the Code](#Understanding_the_Code)
+[Understanding the Code](#understanding_the_code)
 
 
 ## Project Requirements
