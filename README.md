@@ -1,17 +1,17 @@
 
 # Parking Lot
 
-## Contents
+## Table of Contents
 
-[Project Requirements](#project_requirements)
+- [Project Requirements](#project-requirements)
 
-[Description](#Description)
+- [Description](#Description)
 
-[Installation](#Installation)
+- [Installation](#Installation)
 
-[Running the project](#running_the_project)
+- [Running the project](#running-the-project)
 
-[Understanding the Code](#understanding_the_code)
+- [Understanding the Code](#understanding-the-code)
 
 
 ## Project Requirements
