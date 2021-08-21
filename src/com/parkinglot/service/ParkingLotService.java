@@ -7,7 +7,6 @@ import com.parkinglot.model.Vehicle;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class ParkingLotService {
     private ParkingLot parkingLot;
@@ -48,13 +47,10 @@ public class ParkingLotService {
         List<ParkingSpot> allParkingSpots = parkingLot.getParkingSpots();
         for(int parkingSpotNumber=0; parkingSpotNumber<parkingLot.getCapacity(); parkingSpotNumber++)
         {
-            //if(allParkingSpots.contains(parkingSpotNumber))
+            ParkingSpot parkingSpot = allParkingSpots.get(parkingSpotNumber);
+            if(!parkingSpot.isSpotFree())
             {
-                ParkingSpot parkingSpot = allParkingSpots.get(parkingSpotNumber);
-                if(!parkingSpot.isSpotFree())
-                {
-                    occupiedSpots.add(parkingSpot);
-                }
+                occupiedSpots.add(parkingSpot);
             }
         }
         return occupiedSpots;
@@ -66,16 +62,14 @@ public class ParkingLotService {
             throw new ParkingLotNotFoundException();
         }
         List<ParkingSpot> occupiedSpots = new ArrayList<>();
-        List<ParkingSpot> allParkingSpots = parkingLot.getParkingSpots();
-        for(int parkingSpotNumber=1;parkingSpotNumber<=parkingLot.getCapacity();parkingSpotNumber++)
+        List<ParkingSpot> allParkingSpots = getOccupiedSpots();
+
+        for(ParkingSpot occupiedParkingSpot:allParkingSpots)
         {
-            if(allParkingSpots.contains(parkingSpotNumber))
-            {
-                ParkingSpot parkingSpot = allParkingSpots.get(parkingSpotNumber);
-                if(parkingSpot.getParkedVehicle()!=null) {
-                    if (parkingSpot.getParkedVehicle().getDriverAge() == driverAge) {
-                        occupiedSpots.add(parkingSpot);
-                    }
+            if(occupiedParkingSpot.getParkedVehicle()!=null) {
+                if(occupiedParkingSpot.getParkedVehicle().getDriverAge() == driverAge)
+                {
+                    occupiedSpots.add(occupiedParkingSpot);
                 }
             }
         }

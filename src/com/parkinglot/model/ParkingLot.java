@@ -14,7 +14,6 @@ public class ParkingLot {
     private int capacity;
     private Map<Integer, ParkingSpot> parkingSpots;
     private List<ParkingSpot> parkingSlots;
-    //private int numberOfFloors;
 
     public ParkingLot(int capacity)
     {
@@ -22,7 +21,7 @@ public class ParkingLot {
         {
             throw new InvalidCapacityException("Capacity of the parking lot cannot be less than 0");
         }
-        //this.numberOfFloors = 1;
+
         this.capacity = capacity;
         this.parkingSpots = new HashMap<>();
         this.parkingSlots = new ArrayList<>();
@@ -42,21 +41,12 @@ public class ParkingLot {
         return capacity;
     }
 
-//    public Map<Integer, ParkingSpot> getParkingSpots(){
-//        return parkingSpots;
-//    }
-
     public List<ParkingSpot> getParkingSpots(){
         return parkingSlots;
     }
 
     public ParkingSpot getParkingSpot(Integer parkingSpotNumber)
     {
-//        if(!parkingSpots.containsKey(parkingSpotNumber)){
-//            throw new InvalidSpotException();
-//        }
-//        return parkingSpots.get(parkingSpotNumber);
-
         for(ParkingSpot parkingSpot:parkingSlots)
         {
             if(parkingSpot.getParkingSpotNumber() == parkingSpotNumber)

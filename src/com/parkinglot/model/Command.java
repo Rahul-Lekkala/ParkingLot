@@ -32,7 +32,5 @@ public class Command {
         for(int i=1;i<command.length;i++)
             commands[i-1] = command[i];
 
-//        for(int i=0;i<command.length-1;i++)
-//            System.out.println(commands[i]);
     }
 }
