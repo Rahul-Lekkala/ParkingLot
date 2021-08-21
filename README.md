@@ -66,7 +66,7 @@ No parked car matches the query
 ### MacOs ###
 
 - Go to [Oracle's website](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) and download the latest macOs x64.
-![Image](/images/java-installation.png)
+![Image](/images/java-installation.PNG)
 
 - Wait for the download to complete. Double click the file from the downloads folder.
 Java Installer would launch up. Click Continue.
